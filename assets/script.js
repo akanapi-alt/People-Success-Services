@@ -44,8 +44,6 @@
     sections.forEach(section => sectionObserver.observe(section));
   }
 
-
-  const finder = document.getElementById('next-step-finder');
   const finderResult = document.getElementById('finder-result');
   const finderOptions = Array.from(document.querySelectorAll('.finder-option'));
 
@@ -54,18 +52,18 @@
       title: 'Start with L&D Office Hours.',
       body: 'Choose the session that fits your schedule and join directly in Google Meet.',
       actions: [
-        ['Monday 8:30 to 9:00 ET', 'https://meet.google.com/zqj-onic-tkk', true],
-        ['Wednesday 5:30 to 6:00 ET', 'https://meet.google.com/xrs-cked-uqz', false],
-        ['Thursday 12:00 to 12:30 ET', 'https://meet.google.com/fui-uasc-ued', false]
+        ['Monday 8:30 to 9:00', 'https://meet.google.com/zqj-onic-tkk', true],
+        ['Wednesday 5:30 to 6:00', 'https://meet.google.com/xrs-cked-uqz', false],
+        ['Thursday 12:00 to 12:30 AM', 'https://meet.google.com/fui-uasc-ued', false]
       ]
     },
     learning: {
-      title: 'Start with Infosys Springboard & In-house Library',
-      body: 'Use the IBPAP Learning Hub & In-house library for free AI, technology, professional skills, soft skills, and structured learning paths.',
+      title: 'Start with your learning foundations.',
+      body: 'Begin with the Boldr In-house Course Library, then use Infosys Springboard for AI, technology, professional skills, soft skills, and structured learning paths.',
       actions: [
-  ['Open in-house library', 'https://boldrlearning.wixstudio.com/peopledevelopment/courselibrary', true],
-  ['Open Infosys Springboard', 'https://infyspringboard-ph.onwingspan.com/web/en/login', false]
-]
+        ['Open in-house library', 'https://boldrlearning.wixstudio.com/peopledevelopment/courselibrary', true],
+        ['Open Infosys Springboard', 'https://infyspringboard-ph.onwingspan.com/web/en/', false]
+      ]
     },
     growth: {
       title: 'Use DataCamp and Juno.',
@@ -87,7 +85,7 @@
     }
   };
 
-  if (finder && finderResult && finderOptions.length) {
+  if (finderResult && finderOptions.length) {
     finderOptions.forEach(button => {
       button.addEventListener('click', () => {
         const choice = resourceRecommendations[button.dataset.resource];
@@ -101,7 +99,6 @@
       });
     });
   }
-
 
   const lightbox = document.getElementById('image-lightbox');
   const lightboxImage = document.getElementById('lightbox-image');
@@ -132,21 +129,13 @@
   }
 
   if (lightbox && lightboxTriggers.length) {
-    lightboxTriggers.forEach(trigger => {
-      trigger.addEventListener('click', () => openLightbox(trigger));
-    });
-
+    lightboxTriggers.forEach(trigger => trigger.addEventListener('click', () => openLightbox(trigger)));
     lightbox.addEventListener('click', event => {
       if (event.target.matches('[data-lightbox-close="true"]')) closeLightbox();
     });
-
-    if (lightboxClose) {
-      lightboxClose.addEventListener('click', closeLightbox);
-    }
-
+    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
     document.addEventListener('keydown', event => {
       if (event.key === 'Escape') closeLightbox();
     });
   }
-
 })();

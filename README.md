@@ -1,27 +1,27 @@
-# Grow at Boldr | People Success
+# People Success Services
 
-Static GitHub Pages site generated from the People Success Services Guide.
+Static GitHub Pages website for Boldr People Success.
 
-## Files
+## What is included
 
-- `index.html` — complete one page website
-- `assets/styles.css` — responsive Boldr branded styling
-- `assets/script.js` — navigation, scroll reveals, and interactive next step finder
-- `assets/images/` — local brand and platform images
-- `.nojekyll` — serves the site directly as static files on GitHub Pages
+- Official Boldr color palette applied across the site
+- Inter primary typography and Roboto Mono supporting labels
+- More generous spacing and a three-line hero hierarchy
+- Direct In-house Course Library and Infosys Springboard links
+- Interactive Quick Finder with learning, growth, mentorship, leadership, and Office Hours actions
+- Enlarged clickable Juno Career Growth preview with accessible lightbox
+- Refined Leadership Development program cards
+- Restored four-step How to Engage sequence
+- Updated footer copy: People Success Services
 
-## Included live links
+## GitHub Pages upload
 
-- Monday L&D Office Hours: `https://meet.google.com/zqj-onic-tkk`
-- Wednesday L&D Office Hours: `https://meet.google.com/xrs-cked-uqz`
-- Thursday L&D Office Hours: `https://meet.google.com/fui-uasc-ued`
-- Infosys Springboard: `https://infyspringboard-ph.onwingspan.com/web/en/login`
-- Juno: `https://boldr.the-juno.com/`
-- DataCamp: `https://www.datacamp.com/`
-- Mently: `https://mently.boldrtech.com/l`
+Upload `index.html`, `.nojekyll`, `README.md`, and the entire `assets` folder to the repository root. No build step is required.
 
-## GitHub Pages
+The site uses Google Fonts for Inter and Roboto Mono. No package installation is required. If the font service is unavailable, the CSS falls back to standard local fonts.
 
-Upload the contents of this folder to the repository root. Configure Pages to deploy from the `main` branch and `/ (root)`.
 
-If you want to use the default `github.io` address, remove any existing `CNAME` file from the repository and clear the Custom domain field in Settings > Pages.
+## V5 refinements
+
+- Improved contrast and wording in the Aspiring Leaders “Best fit” card.
+- Refined the Lead with Impact section with clearer program hierarchy, structured context cards, participant benefit cards, and a stronger program outcome callout.
