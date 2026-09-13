@@ -52,9 +52,9 @@
       title: 'Start with L&D Office Hours.',
       body: 'Choose the session that fits your schedule and join directly in Google Meet.',
       actions: [
-        ['Monday 8:30 to 9:00', 'https://meet.google.com/zqj-onic-tkk', true],
-        ['Wednesday 5:30 to 6:00', 'https://meet.google.com/xrs-cked-uqz', false],
-        ['Thursday 12:00 to 12:30 AM', 'https://meet.google.com/fui-uasc-ued', false]
+        ['Monday 8:30 to 9:00 ET', 'https://meet.google.com/zqj-onic-tkk', true],
+        ['Wednesday 5:30 to 6:00 ET', 'https://meet.google.com/xrs-cked-uqz', false],
+        ['Thursday 12:00 to 12:30 ET', 'https://meet.google.com/fui-uasc-ued', false]
       ]
     },
     learning: {
