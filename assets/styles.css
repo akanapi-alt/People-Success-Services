@@ -1256,3 +1256,334 @@ h3 { line-height: 1.12; }
   .impact-context-final { grid-template-columns: 1fr; }
   .impact-snapshot-final, .impact-context-final .impact-context-card, .impact-benefit-grid-final .impact-benefit-card, .impact-closing-final { grid-template-columns: 1fr; }
 }
+
+/* Final session refinements */
+
+/* Transparent Juno Journey logo */
+.platform-card img[src$="juno-logo.png"] {
+  height: 48px;
+  width: auto;
+  max-width: 250px;
+  object-fit: contain;
+}
+
+/* Aspiring Leaders — approved abstract leadership direction */
+.aspiring-section {
+  background: linear-gradient(180deg, #fff 0%, var(--cirrus) 100%);
+}
+.aspiring-section::after {
+  opacity: .18 !important;
+  background: radial-gradient(circle at 82% 20%, rgba(255,107,0,.14), transparent 44%),
+              radial-gradient(circle at 92% 54%, rgba(149,153,247,.12), transparent 38%) !important;
+}
+.aspiring-hero {
+  display: grid;
+  grid-template-columns: minmax(0,1.08fr) minmax(420px,.92fr);
+  gap: 62px;
+  align-items: center;
+  margin-bottom: 42px;
+}
+.aspiring-copy { max-width: 760px; }
+.aspiring-copy > p:not(.eyebrow) {
+  margin-top: 20px;
+  max-width: 700px;
+  color: var(--twilight);
+  font-size: 1.08rem;
+}
+.aspiring-art {
+  position: relative;
+  min-height: 300px;
+  display: grid;
+  grid-template-columns: minmax(120px,.7fr) minmax(260px,1.3fr) 112px;
+  align-items: center;
+  gap: 0;
+}
+.aspiring-art::before,
+.aspiring-art::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.aspiring-art::before {
+  width: 250px;
+  height: 250px;
+  right: 38px;
+  top: 8px;
+  background: rgba(255,107,0,.08);
+}
+.aspiring-art::after {
+  width: 190px;
+  height: 190px;
+  right: 150px;
+  bottom: -14px;
+  background: rgba(149,153,247,.08);
+}
+.aspiring-art svg {
+  width: 100%;
+  min-width: 300px;
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+}
+.aspiring-art-message {
+  position: relative;
+  z-index: 3;
+  align-self: start;
+  margin-top: 44px;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.45rem,2.2vw,2.05rem);
+  font-style: italic;
+  line-height: 1.05;
+  transform: rotate(-4deg);
+}
+.aspiring-art-message::after {
+  content: "";
+  display: block;
+  width: 86px;
+  height: 5px;
+  margin-top: 10px;
+  margin-left: 8px;
+  border-radius: 999px;
+  background: var(--orange);
+  transform: rotate(-8deg);
+}
+.aspiring-keywords {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  gap: 8px;
+  color: var(--twilight);
+  font-family: "Roboto Mono", "Courier New", monospace;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.aspiring-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 18px;
+}
+.aspiring-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 66px 1fr;
+  gap: 20px;
+  align-items: center;
+  min-height: 158px;
+  padding: 28px 30px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(37,45,73,.05);
+}
+.aspiring-card::after {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  right: -62px;
+  bottom: -78px;
+  border-radius: 50%;
+  background: rgba(255,107,0,.07);
+}
+.aspiring-card-icon {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: rgba(255,107,0,.10);
+  color: var(--orange);
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+.aspiring-card h3 { font-size: clamp(1.35rem,2vw,1.7rem); }
+.aspiring-card p { margin-top: 8px; color: var(--twilight); }
+.aspiring-card-orange { background: linear-gradient(135deg,#fff 0%,rgba(255,107,0,.045) 100%); }
+.aspiring-card-blue { background: linear-gradient(135deg,rgba(221,228,227,.34),#fff 76%); }
+.aspiring-card-blue .aspiring-card-icon { background: rgba(117,128,138,.12); color: var(--lightning-dark); }
+.aspiring-card-light { background: linear-gradient(135deg,#fff 0%,rgba(250,247,242,.9) 100%); }
+.aspiring-card-dark {
+  background: linear-gradient(135deg,var(--ink),#303a60);
+  border-color: rgba(37,45,73,.35);
+  color: #fff;
+}
+.aspiring-card-dark .aspiring-card-icon { background: rgba(149,153,247,.16); color: #fff; }
+.aspiring-card-dark h3 { color: #fff; }
+.aspiring-card-dark p { color: rgba(250,247,242,.88); }
+.aspiring-card-dark::after { background: rgba(149,153,247,.10); }
+.aspiring-cta {
+  display: grid;
+  grid-template-columns: 58px minmax(0,1fr) auto;
+  gap: 20px;
+  align-items: center;
+  margin-top: 24px;
+  padding: 24px 28px;
+  border: 1px solid rgba(255,107,0,.44);
+  border-radius: 16px;
+  background: linear-gradient(90deg,#fff,rgba(255,107,0,.045));
+}
+.aspiring-cta-icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(255,107,0,.10);
+  color: var(--orange);
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+.aspiring-cta .eyebrow { margin-bottom: 4px; }
+.aspiring-cta h3 { font-size: clamp(1.3rem,2vw,1.65rem); }
+.aspiring-cta p:not(.eyebrow) { margin-top: 6px; color: var(--twilight); }
+.aspiring-cta .button { min-width: 220px; }
+.aspiring-benefits {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.aspiring-benefits > div {
+  padding: 0 26px;
+  border-left: 1px solid var(--line);
+}
+.aspiring-benefits > div:first-child { padding-left: 0; border-left: 0; }
+.aspiring-benefits strong { display: block; color: var(--ink); }
+.aspiring-benefits span { display: block; margin-top: 2px; color: var(--twilight); font-size: .9rem; }
+
+/* Lead with Strengths — livelier, still within Boldr palette */
+.strengths-section {
+  background:
+    radial-gradient(circle at 88% 14%, rgba(255,107,0,.10), transparent 28%),
+    radial-gradient(circle at 78% 29%, rgba(149,153,247,.11), transparent 23%),
+    linear-gradient(180deg, rgba(221,228,227,.32), rgba(250,247,242,.88));
+}
+.strengths-principle {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(255,107,0,.08), rgba(149,153,247,.10) 52%, rgba(221,228,227,.56));
+  border-color: rgba(255,107,0,.18);
+  box-shadow: 0 12px 34px rgba(37,45,73,.055);
+}
+.strengths-principle::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  right: -40px;
+  bottom: -60px;
+  border-radius: 50%;
+  background: rgba(255,107,0,.08);
+}
+.strengths-role-card { border-width: 1px; }
+.strengths-role-senior {
+  background: linear-gradient(145deg, rgba(149,153,247,.20), rgba(255,255,255,.96) 70%);
+  border-color: rgba(29,39,129,.18);
+}
+.strengths-role-team {
+  background: linear-gradient(145deg, rgba(255,107,0,.12), rgba(250,247,242,.96) 72%);
+  border-color: rgba(255,107,0,.20);
+}
+.strengths-role-ic {
+  background: linear-gradient(145deg, rgba(221,228,227,.88), rgba(255,255,255,.98) 74%);
+  border-color: rgba(117,128,138,.22);
+}
+.strengths-role-card::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  right: -72px;
+  bottom: -84px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.strengths-role-senior::after { background: rgba(149,153,247,.13); }
+.strengths-role-team::after { background: rgba(255,107,0,.09); }
+.strengths-role-ic::after { background: rgba(117,128,138,.10); }
+.strengths-role-senior .strengths-role-icon { background: rgba(149,153,247,.22); color: var(--lightning-dark); }
+.strengths-role-team .strengths-role-icon { background: rgba(255,107,0,.16); color: var(--orange); }
+.strengths-role-ic .strengths-role-icon { background: rgba(221,228,227,.96); color: var(--twilight); }
+.strengths-role-senior .strengths-role-label { color: var(--lightning-dark); }
+.strengths-role-team .strengths-role-label { color: var(--orange); }
+.strengths-role-ic .strengths-role-label { color: var(--twilight); }
+.strengths-role-senior li::before { color: var(--lightning-dark); }
+.strengths-role-team li::before { color: var(--orange); }
+.strengths-role-ic li::before { color: var(--twilight); }
+.strengths-gallup {
+  position: relative;
+  overflow: hidden;
+  border-left: 4px solid var(--orange);
+  background: linear-gradient(90deg,#fff 0%,rgba(250,247,242,.96) 56%,rgba(221,228,227,.46) 100%);
+  box-shadow: 0 10px 28px rgba(37,45,73,.045);
+}
+.strengths-gallup::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  right: 38px;
+  bottom: -72px;
+  border-radius: 50%;
+  background: rgba(255,107,0,.07);
+}
+.strengths-gallup-tag { position: relative; z-index: 1; color: var(--twilight); }
+
+/* Lead with Impact — remove visual gap by balancing column heights */
+.impact-intro-final {
+  align-items: stretch;
+  gap: 42px;
+}
+.impact-intro-final .impact-intro-copy {
+  display: flex;
+  flex-direction: column;
+  max-width: none;
+}
+.impact-intro-final .impact-snapshot-final {
+  flex: 1;
+  min-height: 230px;
+  align-content: start;
+}
+.impact-context-final {
+  grid-template-rows: repeat(2,minmax(0,1fr));
+  gap: 18px;
+}
+.impact-context-final .impact-context-card {
+  min-height: 0;
+  height: 100%;
+}
+.impact-section-final .impact-gains { margin-top: 46px; }
+.impact-section-final .impact-gains-heading { margin-bottom: 20px; }
+.impact-section-final .impact-closing-final { margin-top: 20px; }
+
+@media (max-width: 1100px) {
+  .aspiring-hero { grid-template-columns: 1fr; gap: 26px; }
+  .aspiring-art { max-width: 760px; }
+  .aspiring-card-grid { grid-template-columns: 1fr; }
+  .aspiring-cta { grid-template-columns: 54px 1fr; }
+  .aspiring-cta .button { grid-column: 2; width: fit-content; }
+}
+
+@media (max-width: 760px) {
+  .aspiring-art { grid-template-columns: 1fr; min-height: 250px; }
+  .aspiring-art-message { position: absolute; left: 0; top: 0; max-width: 150px; font-size: 1.35rem; }
+  .aspiring-art svg { margin-left: 78px; width: calc(100% - 60px); min-width: 260px; }
+  .aspiring-keywords { display: none; }
+  .aspiring-card { grid-template-columns: 52px 1fr; padding: 24px; }
+  .aspiring-card-icon { width: 48px; height: 48px; font-size: 1.25rem; }
+  .aspiring-cta { grid-template-columns: 1fr; padding: 24px; }
+  .aspiring-cta .button { grid-column: auto; width: 100%; min-width: 0; }
+  .aspiring-benefits { grid-template-columns: 1fr; }
+  .aspiring-benefits > div,
+  .aspiring-benefits > div:first-child { padding: 14px 0; border-left: 0; border-top: 1px solid var(--line); }
+  .aspiring-benefits > div:first-child { border-top: 0; }
+  .impact-intro-final .impact-snapshot-final { min-height: 0; }
+}
