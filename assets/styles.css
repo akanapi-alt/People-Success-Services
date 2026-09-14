@@ -957,3 +957,302 @@ h3 { line-height: 1.12; }
   .impact-gains { margin-top: 48px; }
   .impact-closing { grid-template-columns: 1fr; gap: 10px; }
 }
+
+
+/* ============================================================
+   FINAL SESSION REFINEMENTS
+   Learning Hub, Juno Career Growth, Strengths, Lead with Impact
+   ============================================================ */
+
+/* Learning Hub */
+.hub-feature-final {
+  grid-template-columns: minmax(0, 1fr) minmax(460px, .94fr);
+  gap: 0;
+  border-radius: 22px;
+  background: #fff;
+}
+.hub-copy-final { padding: 48px; }
+.hub-copy-final h2 { max-width: 650px; }
+.hub-intro { margin-top: 18px; color: var(--twilight); font-size: 1.03rem; max-width: 650px; }
+.hub-stats { margin: 32px 0 34px; gap: 14px; }
+.hub-stats div { min-height: 112px; justify-content: center; padding: 24px 26px; border-radius: 14px; }
+.hub-stats strong { font-size: clamp(2rem,3vw,2.7rem); }
+.hub-explore-grid { gap: 14px; }
+.hub-explore-card {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 14px;
+  align-items: start;
+  min-height: 158px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(221,228,227,.36);
+}
+.hub-explore-card:nth-child(2) { background: rgba(250,247,242,.92); }
+.hub-explore-card:nth-child(3) { background: rgba(221,228,227,.22); }
+.hub-explore-card:nth-child(4) { background: rgba(149,153,247,.11); }
+.hub-explore-mark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,107,0,.10);
+  color: var(--orange);
+  font-family: "Roboto Mono", "Courier New", monospace;
+  font-size: .72rem;
+  font-weight: 800;
+}
+.hub-explore-card h4 { margin-bottom: 8px; }
+.hub-explore-card p { color: var(--twilight); font-size: .92rem; }
+.hub-learning-note {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 14px;
+  align-items: start;
+  margin-top: 20px;
+  padding: 18px 20px;
+  border-left: 3px solid var(--orange);
+  border-radius: 10px;
+  background: var(--cirrus);
+}
+.hub-learning-note > span { color: var(--orange); font-size: 1.25rem; }
+.hub-learning-note p { color: var(--twilight); font-size: .9rem; margin-top: 2px; }
+
+.registration-panel-final {
+  padding: 38px;
+  background: linear-gradient(180deg, rgba(250,247,242,.95), #fff);
+  border-left: 1px solid var(--line);
+}
+.registration-hero {
+  display: grid;
+  grid-template-columns: minmax(190px, .78fr) minmax(0, 1.22fr);
+  gap: 24px;
+  align-items: center;
+  padding: 22px;
+  border: 1px solid rgba(255,107,0,.24);
+  border-radius: 18px;
+  background: linear-gradient(135deg,#fff,rgba(250,247,242,.76));
+  box-shadow: 0 12px 34px rgba(37,45,73,.06);
+}
+.qr-feature-card {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  padding: 14px;
+  border: 2px solid rgba(255,107,0,.55);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(255,107,0,.10);
+}
+.qr-feature-card img { width: min(100%, 220px); border-radius: 8px; }
+.qr-feature-label {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: var(--orange);
+  color: #fff;
+  font-family: "Roboto Mono", "Courier New", monospace;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .05em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.qr-feature-help { color: var(--twilight); font-size: .75rem; text-align: center; }
+.registration-hero-copy h3 { font-size: clamp(1.7rem,2.7vw,2.25rem); line-height: 1.05; }
+.registration-hero-copy > p:not(.eyebrow) { margin-top: 12px; color: var(--twilight); }
+.registration-benefits { display: grid; gap: 8px; margin: 18px 0 0; padding: 0; list-style: none; }
+.registration-benefits li { position: relative; padding-left: 24px; color: var(--twilight); font-size: .88rem; }
+.registration-benefits li::before { content: "✓"; position: absolute; left: 0; color: var(--orange); font-weight: 900; }
+.registration-button { width: 100%; margin-top: 20px; min-height: 50px; }
+.registration-steps { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
+.registration-numbered-flow { gap: 20px; }
+.registration-quick-flow { margin-top: 28px; }
+.registration-quick-flow span { min-height: 56px; display: grid; place-items: center; background: #fff; }
+.registration-ready {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 16px;
+  align-items: center;
+  margin-top: 20px;
+  padding: 22px 24px;
+  border-radius: 12px;
+  background: var(--ink);
+  color: #fff;
+}
+.registration-ready-icon { display: grid; place-items: center; width: 50px; height: 50px; border-radius: 50%; background: rgba(255,107,0,.18); color: var(--orange); font-size: 1.4rem; }
+.registration-ready p { margin-top: 4px; color: rgba(255,255,255,.76); font-size: .9rem; }
+
+/* Juno Career Growth */
+.career-growth-final { margin-top: 84px; }
+.career-growth-heading { max-width: 940px; }
+.career-growth-heading > p:not(.eyebrow) { margin-top: 18px; color: var(--twilight); font-size: 1.02rem; max-width: 900px; }
+.career-guide-card {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 18px;
+  align-items: start;
+  margin-top: 34px;
+  padding: 26px 28px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(37,45,73,.05);
+}
+.career-guide-icon, .career-action-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(255,107,0,.10);
+  color: var(--orange);
+  font-weight: 900;
+}
+.career-guide-card p { margin-top: 6px; color: var(--twilight); }
+.career-action-bar {
+  display: grid;
+  grid-template-columns: minmax(300px,.78fr) minmax(0,1.22fr);
+  gap: 22px;
+  align-items: center;
+  margin-top: 16px;
+  padding: 20px 22px;
+  border: 1px solid rgba(255,107,0,.28);
+  border-radius: 14px;
+  background: linear-gradient(90deg,rgba(250,247,242,.96),#fff);
+}
+.career-action-button { width: 100%; min-height: 58px; }
+.career-action-copy { display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: center; }
+.career-action-copy p { margin-top: 3px; color: var(--twilight); font-size: .9rem; }
+.career-growth-preview-final { margin-top: 28px; padding: 28px; }
+.career-growth-preview-final figcaption { color: var(--twilight); }
+.career-growth-preview-final figcaption strong { color: var(--ink); }
+.career-growth-preview-final figcaption span { font-size: .82rem; }
+.career-growth-preview-final .career-image-wrap { border: 1px solid rgba(37,45,73,.10); }
+.career-growth-preview-final .career-image-wrap > img { width: 100%; min-height: 300px; object-fit: contain; background: #fff; }
+.career-benefit-row {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: 0;
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+.career-benefit-row > div { padding: 0 20px; border-left: 1px solid var(--line); }
+.career-benefit-row > div:first-child { padding-left: 0; border-left: 0; }
+.career-benefit-row span { display: block; margin-bottom: 8px; color: var(--orange); font-family: "Roboto Mono", "Courier New", monospace; font-size: .7rem; font-weight: 800; }
+.career-benefit-row strong { display: block; }
+.career-benefit-row p { margin-top: 4px; color: var(--twilight); font-size: .82rem; }
+
+/* Lead with Strengths */
+.strengths-section { background: linear-gradient(180deg,rgba(221,228,227,.30),rgba(250,247,242,.78)); }
+.strengths-header { display: grid; grid-template-columns: minmax(0,1.2fr) minmax(340px,.8fr); gap: 70px; align-items: center; margin-bottom: 44px; }
+.strengths-heading-copy { max-width: 760px; }
+.strengths-heading-copy > p:not(.eyebrow) { margin-top: 18px; color: var(--twilight); font-size: 1.04rem; }
+.strengths-principle {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 18px;
+  align-items: center;
+  padding: 28px;
+  border-radius: 18px;
+  background: linear-gradient(135deg,rgba(250,247,242,.94),rgba(221,228,227,.55));
+  border: 1px solid var(--line);
+}
+.strengths-principle-mark { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: rgba(255,107,0,.11); color: var(--orange); font-size: 1.25rem; }
+.strengths-principle p { color: var(--ink); font-size: 1.05rem; font-weight: 700; line-height: 1.45; }
+.strengths-role-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
+.strengths-role-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 440px;
+  padding: 30px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 12px 34px rgba(37,45,73,.055);
+}
+.strengths-role-senior { background: linear-gradient(145deg,rgba(149,153,247,.13),#fff 70%); }
+.strengths-role-team { background: linear-gradient(145deg,rgba(255,107,0,.07),#fff 70%); }
+.strengths-role-ic { background: linear-gradient(145deg,rgba(221,228,227,.55),#fff 70%); }
+.strengths-role-head { display: grid; grid-template-columns: 54px 1fr; gap: 16px; align-items: center; }
+.strengths-role-icon { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 50%; background: rgba(37,45,73,.08); color: var(--ink); font-family: "Roboto Mono", "Courier New", monospace; font-size: .76rem; font-weight: 800; }
+.strengths-role-team .strengths-role-icon { background: rgba(255,107,0,.12); color: var(--orange); }
+.strengths-role-ic .strengths-role-icon { background: rgba(221,228,227,.95); }
+.strengths-role-label { margin-bottom: 4px; color: var(--orange); font-family: "Roboto Mono", "Courier New", monospace; font-size: .65rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.strengths-role-card h3 { font-size: clamp(1.5rem,2.2vw,1.9rem); }
+.strengths-role-summary { margin-top: 20px; color: var(--twilight); }
+.strengths-role-card ul { display: grid; gap: 12px; margin: 24px 0 0; padding: 22px 0 0; border-top: 1px solid var(--line); list-style: none; }
+.strengths-role-card li { position: relative; padding-left: 26px; color: var(--twilight); font-size: .91rem; }
+.strengths-role-card li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--orange); font-weight: 900; }
+.strengths-gallup {
+  display: grid;
+  grid-template-columns: 150px 1fr 190px;
+  gap: 28px;
+  align-items: center;
+  margin-top: 28px;
+  padding: 26px 30px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+}
+.strengths-gallup img { width: 130px; }
+.strengths-gallup p { margin-top: 4px; color: var(--twilight); }
+.strengths-gallup-tag { color: var(--nimbus); font-family: "Roboto Mono", "Courier New", monospace; font-size: .72rem; font-weight: 700; letter-spacing: .12em; line-height: 1.6; text-transform: uppercase; }
+
+/* Lead with Impact final balance */
+.impact-section-final { background: var(--cirrus); }
+.impact-intro-final { grid-template-columns: minmax(0,1.05fr) minmax(420px,.95fr); gap: 56px; }
+.impact-snapshot-final { display: grid; grid-template-columns: 62px 1fr; gap: 18px; align-items: start; }
+.impact-icon, .impact-benefit-icon, .impact-closing-mark {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(255,107,0,.11);
+  color: var(--orange);
+  font-family: "Roboto Mono", "Courier New", monospace;
+  font-size: .74rem;
+  font-weight: 800;
+}
+.impact-context-final .impact-context-card { display: grid; grid-template-columns: 58px 1fr; gap: 18px; align-items: start; min-height: 230px; }
+.impact-benefit-grid-final .impact-benefit-card { display: grid; grid-template-columns: 58px 1fr; gap: 18px; align-items: start; min-height: 180px; padding: 28px; }
+.impact-benefit-icon { width: 50px; height: 50px; }
+.impact-closing-final { grid-template-columns: 54px 1fr; }
+.impact-closing-final > div > span { display: block; margin-bottom: 6px; color: var(--orange); font-family: "Roboto Mono", "Courier New", monospace; font-size: .7rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+
+@media (max-width: 1100px) {
+  .hub-feature-final { grid-template-columns: 1fr; }
+  .registration-panel-final { border-left: 0; border-top: 1px solid var(--line); }
+  .career-benefit-row { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px 0; }
+  .career-benefit-row > div:nth-child(3) { border-left: 0; padding-left: 0; }
+  .strengths-header { grid-template-columns: 1fr; gap: 28px; }
+  .strengths-principle { max-width: 720px; }
+  .strengths-role-grid { grid-template-columns: 1fr; }
+  .strengths-role-card { min-height: 0; }
+  .strengths-gallup { grid-template-columns: 140px 1fr; }
+  .strengths-gallup-tag { grid-column: 2; }
+  .impact-intro-final { grid-template-columns: 1fr; }
+  .impact-context-final { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+
+@media (max-width: 760px) {
+  .hub-copy-final, .registration-panel-final { padding: 26px; }
+  .registration-hero { grid-template-columns: 1fr; }
+  .qr-feature-card { max-width: 320px; margin-inline: auto; }
+  .career-growth-final { margin-top: 64px; }
+  .career-action-bar { grid-template-columns: 1fr; }
+  .career-benefit-row { grid-template-columns: 1fr; gap: 0; }
+  .career-benefit-row > div, .career-benefit-row > div:nth-child(3) { padding: 16px 0; border-left: 0; border-top: 1px solid var(--line); }
+  .career-benefit-row > div:first-child { border-top: 0; }
+  .career-growth-preview-final .career-image-wrap > img { min-height: 0; }
+  .strengths-gallup { grid-template-columns: 1fr; }
+  .strengths-gallup-tag { grid-column: auto; }
+  .impact-context-final { grid-template-columns: 1fr; }
+  .impact-snapshot-final, .impact-context-final .impact-context-card, .impact-benefit-grid-final .impact-benefit-card, .impact-closing-final { grid-template-columns: 1fr; }
+}
