@@ -1,17 +1,17 @@
 # People Success Services
 
-Static one-page People Success Services website for GitHub Pages.
+Static multi-page GitHub Pages portal for Boldr People Success.
 
-## Structure
+## Pages
 
-- `index.html` — one-page website
-- `assets/styles.css` — responsive Boldr-branded styling
-- `assets/script.js` — mobile navigation, quick finder, scroll effects, and image lightbox
-- `assets/images/` — logos, QR code, platform artwork, and presentation visuals
-- `.nojekyll` — serves the site directly as static files on GitHub Pages
+- `index.html` — People Success hub and Quick Finder
+- `learning.html` — In-House Library, Infosys Springboard, DataCamp, Juno, and Juno Career Growth
+- `mentorship.html` — Mently mentorship
+- `leadership.html` — Aspiring Leaders, Lead with Strengths, Lead with Impact, and L.E.A.D. Coaching
+- `office-hours.html` — L&D Office Hours and Google Meet links
+- `career-growth.html` — compatibility redirect to the Juno Career Growth section within Learning
 
-## Final session updates
+The site uses plain HTML, CSS, and vanilla JavaScript. No build step is required.
 
-This build includes the approved abstract-art Aspiring Leaders redesign, a more balanced Lead with Impact layout, a more lively Lead with Strengths color treatment, and a transparent PNG Juno Journey logo. It also preserves the QR-focused Learning Hub experience, balanced Juno Career Growth section, Office Hours ET labels, interactive Quick Finder, and all existing resource links.
-
-No package manager, framework, or build process is required.
+## Navigation refinement
+Learning and Leadership now use a unified single-click dropdown control. Only one menu can be open at a time, outside click/Escape closes the active menu, and keyboard arrow navigation is supported. Learning includes a direct Career Growth link to the Juno Career Growth section.
