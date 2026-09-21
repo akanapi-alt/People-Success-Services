@@ -9,7 +9,6 @@
       mobileToggle.setAttribute('aria-expanded', String(open));
       if (!open) closeAllNavGroups();
     });
-
     navLinks.forEach(link => link.addEventListener('click', () => {
       nav.classList.remove('open');
       mobileToggle.setAttribute('aria-expanded', 'false');
@@ -18,7 +17,6 @@
   }
 
   const navGroups = Array.from(document.querySelectorAll('.nav-group'));
-
   function closeNavGroup(group, { returnFocus = false } = {}) {
     if (!group) return;
     const button = group.querySelector('.nav-menu-button');
@@ -34,7 +32,6 @@
       if (group !== except) closeNavGroup(group);
     });
   }
-
   navGroups.forEach((group, index) => {
     const button = group.querySelector('.nav-menu-button');
     const dropdown = group.querySelector('.nav-dropdown');
@@ -42,7 +39,6 @@
 
     if (!dropdown.id) dropdown.id = `nav-dropdown-${index + 1}`;
     button.setAttribute('aria-controls', dropdown.id);
-
     const setOpen = (open, focusFirst = false) => {
       closeAllNavGroups(open ? group : null);
       group.classList.toggle('is-open', open);
@@ -58,7 +54,6 @@
       event.stopPropagation();
       setOpen(!group.classList.contains('is-open'));
     });
-
     button.addEventListener('keydown', event => {
       if (event.key === 'ArrowDown') {
         event.preventDefault();
@@ -68,7 +63,6 @@
         closeNavGroup(group);
       }
     });
-
     dropdown.addEventListener('keydown', event => {
       const links = Array.from(dropdown.querySelectorAll('a'));
       const current = links.indexOf(document.activeElement);
@@ -83,7 +77,6 @@
         links[(current - 1 + links.length) % links.length].focus();
       }
     });
-
     dropdown.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => closeNavGroup(group));
     });
@@ -92,7 +85,6 @@
   document.addEventListener('click', event => {
     if (!event.target.closest('.nav-group')) closeAllNavGroups();
   });
-
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape') {
       const openGroup = navGroups.find(group => group.classList.contains('is-open'));
@@ -134,14 +126,23 @@
   const tabs = Array.from(document.querySelectorAll('.leadership-tab'));
   const panels = Array.from(document.querySelectorAll('[data-program-panel]'));
   if (tabs.length && panels.length) {
-    const activate = (id) => {
-      tabs.forEach(tab => { const on = tab.dataset.program === id; tab.classList.toggle('is-active', on); tab.setAttribute('aria-selected', String(on)); });
-      panels.forEach(panel => { const on = panel.dataset.programPanel === id; panel.hidden = !on; if (on) panel.querySelectorAll('.reveal').forEach(el => el.classList.add('visible')); });
+    const activate = (id, shouldScroll = true) => {
+      tabs.forEach(tab => {
+        const on = tab.dataset.program === id;
+        tab.classList.toggle('is-active', on);
+        tab.setAttribute('aria-selected', String(on));
+      });
+      panels.forEach(panel => {
+        const on = panel.dataset.programPanel === id;
+        panel.hidden = !on;
+        if (on) panel.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+      });
       const active = panels.find(panel => panel.dataset.programPanel === id);
-      if (active) active.scrollIntoView({behavior:'smooth', block:'start'});
+      if (active && shouldScroll) active.scrollIntoView({ behavior: 'smooth', block: 'start' });
     };
     tabs.forEach(tab => tab.addEventListener('click', () => activate(tab.dataset.program)));
-    const hash = window.location.hash.replace('#',''); if (['aspiring-leaders','strengths','lead-with-impact','lead-coaching'].includes(hash)) activate(hash);
+    const hash = window.location.hash.replace('#', '');
+    if (['aspiring-leaders', 'strengths', 'lead-with-impact', 'lead-coaching'].includes(hash)) activate(hash, false);
   }
 
   const lightbox = document.getElementById('image-lightbox');
@@ -152,11 +153,20 @@
   function openLightbox(trigger) {
     if (!lightbox || !lightboxImage || !trigger) return;
     const src = trigger.getAttribute('data-lightbox-image'); if (!src) return;
-    lastLightboxTrigger = trigger; lightboxImage.src = src; lightboxImage.alt = trigger.getAttribute('data-lightbox-alt') || '';
-    lightbox.hidden = false; document.body.style.overflow = 'hidden'; if (lightboxClose) lightboxClose.focus();
+    lastLightboxTrigger = trigger;
+    lightboxImage.src = src;
+    lightboxImage.alt = trigger.getAttribute('data-lightbox-alt') || '';
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+    if (lightboxClose) lightboxClose.focus();
   }
   function closeLightbox() {
-    if (!lightbox || lightbox.hidden) return; lightbox.hidden = true; lightboxImage.src = ''; lightboxImage.alt = ''; document.body.style.overflow = ''; if (lastLightboxTrigger) lastLightboxTrigger.focus();
+    if (!lightbox || lightbox.hidden) return;
+    lightbox.hidden = true;
+    lightboxImage.src = '';
+    lightboxImage.alt = '';
+    document.body.style.overflow = '';
+    if (lastLightboxTrigger) lastLightboxTrigger.focus();
   }
   if (lightbox && lightboxTriggers.length) {
     lightboxTriggers.forEach(trigger => trigger.addEventListener('click', () => openLightbox(trigger)));
