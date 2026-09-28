@@ -1,28 +1,39 @@
-# People Success Services
+# Boldr Strengths Site v18
 
-Static multi-page GitHub Pages portal for Boldr People Success.
+Static, GitHub Pages compatible Boldr CliftonStrengths experience.
 
 ## Pages
 
-- `index.html` — People Success hub and Quick Finder
-- `learning.html` — In-House Library, Infosys Springboard, DataCamp, Juno, and Juno Career Growth
-- `mentorship.html` — Mently mentorship
-- `leadership.html` — Aspiring Leaders, Lead with Strengths, Lead with Impact, and L.E.A.D. Coaching
-- `office-hours.html` — L&D Office Hours and Google Meet links
-- `career-growth.html` — compatibility redirect to the Juno Career Growth section within Learning
+- `index.html` — Overview and CliftonStrengths framework
+- `grid.html` — Explore People: person discovery, Card view and paginated Matrix view
+- `insights.html` — Strengths Insights: aggregate patterns, domain/theme representation, location analysis and Excel export
+- `profile.html` — Individual strengths profile
 
-The site uses plain HTML, CSS, and vanilla JavaScript. No build step is required.
+## Product structure
 
-## Navigation refinement
+- **Explore People** answers *who?* It owns name/role search, Domain, Strength, Department, Location and Status filtering, person cards, individual profiles and the person-by-theme Matrix.
+- **Strengths Insights** answers *what patterns?* It owns Location, Department, Status and Top 5/Top 10 analysis scope, aggregate domain/theme analysis, location analysis and the analytical Excel report.
+- Shared Location, Department and Status population matching helpers live in `assets/common.js`.
 
-Learning and Leadership use a unified single-click dropdown control. Only one menu can be open at a time, outside click/Escape closes the active menu, and keyboard arrow navigation is supported. Learning includes a direct Career Growth link to the Juno Career Growth section.
+## v18 updates
 
-## L.E.A.D. update
+- Redesigned individual profile **Top themes** into a clear editorial ranking. Rank is now a primary visual anchor, theme names link quietly to Gallup definitions, domain labels are explicit text tags, and descriptions use readable sentence case.
+- The section heading now adapts to the ranked data available for each profile, such as `Top 10 themes` or `Top 5 themes`, without implying missing information.
+- Moved the **Full 34 report** into a secondary utility row so it no longer competes with the ranked theme heading. Profiles without a complete report now show an explicit unavailable state.
+- Redesigned Explore People profile cards so the Top 5 is a breathable ranked list rather than a cluster of tight pills. Cards retain identity, role and department while making rank order easier to scan.
+- Completed a site-wide typography readability pass, raising very small labels, captions, helper copy, chart annotations, filter text, profile metadata and footnotes while preserving the existing brand hierarchy.
+- Reframed user-facing data language around information maintained by **People Success** rather than file-based source terminology.
+- Removed the fixed `126 active strengths profiles` wording from Explore People. The directory now shows dynamic result context without turning the active population into a headline.
+- Preserved the approved Strengths Insights Theme Coverage treatment and the v17 Matrix/Insights Excel export behavior.
 
-The L.E.A.D. Coaching section now includes the August Genius vs. Excellence Workshop and September Change Management Workshop while retaining the existing People Success portal structure and program progression.
+## Data
 
-## 2026-09-18 support footer update
+The underlying source data structure is unchanged.
 
-- Added the People Success support email `boldrlearning@boldrimpact.com` to the footer as a clickable email link.
-- Replaced `Back to top` across the portal footer with `Return Home →`, linked to `index.html`.
-- Updated the desktop footer grid to support four balanced information areas while retaining the existing mobile single-column behavior.
+- 215 profiles
+- 126 Active
+- 89 Inactive
+- 34 CliftonStrengths themes
+- 4 domains
+
+Status rule: ACTIVE = Active; TERMINATED and blank employment status = Inactive.

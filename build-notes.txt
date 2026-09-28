@@ -1,0 +1,3 @@
+Version 19
+- Refined Theme Coverage card UI on Strengths Insights to better align with adjacent dashboard components.
+- Replaced boxed subcards with a cleaner editorial stat stack and improved spacing, hierarchy, and responsiveness.
