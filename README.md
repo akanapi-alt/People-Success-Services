@@ -21,8 +21,20 @@ Learning and Leadership use a unified single-click dropdown control. Only one me
 
 The L.E.A.D. Coaching section now includes the August Genius vs. Excellence Workshop and September Change Management Workshop while retaining the existing People Success portal structure and program progression.
 
-## 2026-09-18 support footer update
+## 2026-10-01 round update
 
-- Added the People Success support email `boldrlearning@boldrimpact.com` to the footer as a clickable email link.
-- Replaced `Back to top` across the portal footer with `Return Home →`, linked to `index.html`.
-- Updated the desktop footer grid to support four balanced information areas while retaining the existing mobile single-column behavior.
+This full-site package preserves the prior restored-asset/polish build and adds the approved current-round changes:
+
+- Updated Boldr orange wordmark across the site using the supplied logo asset.
+- New small-format B. favicon treatment for browser tabs.
+- Lighter primary navigation and quick-finder label weights.
+- Leadership dropdown hash navigation now activates the selected program while already on the Leadership page, including browser Back/Forward behavior.
+- Juno Career Growth button now opens https://boldr.the-juno.com/develop/career-growth.
+- August L.E.A.D. workshop subtitle changed only from “Commitment 8: Genius” to “Define Your Success”.
+- Footer keeps the People Success descriptor and copyright on one line at desktop widths, retains boldrlearning@boldrimpact.com, and uses Return Home →.
+- Key homepage supporting sentences are kept to one line at desktop widths and wrap normally on smaller screens.
+- ALP Graduates is not included in this build.
+
+## 2026-10-01 footer spacing refinement
+
+This package preserves the 2026-10-01 round update and only refines footer spacing across the site. The footer now uses more vertical padding, larger desktop column gaps, improved label/link spacing, and a wider footer content frame while retaining the existing wording, links, responsive stacking, and one-line desktop copy.

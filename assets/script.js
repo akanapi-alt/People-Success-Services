@@ -141,8 +141,13 @@
       if (active && shouldScroll) active.scrollIntoView({ behavior: 'smooth', block: 'start' });
     };
     tabs.forEach(tab => tab.addEventListener('click', () => activate(tab.dataset.program)));
-    const hash = window.location.hash.replace('#', '');
-    if (['aspiring-leaders', 'strengths', 'lead-with-impact', 'lead-coaching'].includes(hash)) activate(hash, false);
+    const programIds = ['aspiring-leaders', 'strengths', 'lead-with-impact', 'lead-coaching'];
+    const activateFromHash = (shouldScroll = true) => {
+      const hash = window.location.hash.replace('#', '');
+      if (programIds.includes(hash)) activate(hash, shouldScroll);
+    };
+    activateFromHash(false);
+    window.addEventListener('hashchange', () => activateFromHash(true));
   }
 
   const lightbox = document.getElementById('image-lightbox');
